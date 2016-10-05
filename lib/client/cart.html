@@ -1,12 +1,12 @@
 <template name="CartSummary">
 	{{itemCount}} items
 	<br>
-	Total ${{itemTotal}}
+	Total €{{itemTotal}}
 	{{#if itemsInCart}}
 		<br>
 		<a href="{{pathFor 'cart'}}">View Cart</a>
 		<br>
-		{{>CartPayNow}}
+		<!--{{>CartPayNow}}-->
 	{{/if}}
 </template>
 
@@ -15,7 +15,7 @@
 </template>
 
 <template name="CartPayNow">
-	<button id="pay-now">Pay Now</button>
+	<button id="pay-now" class="btn btn-primary btn-sm">Pay Now</button>
 </template>
 
 <template name="CartItems">
@@ -52,8 +52,8 @@
 
 	                        <div class="ibox-content">
 
-                            <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
-                            <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continue shopping</button>
+                            <a href="/checkout" class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</a>
+                            <a href="/gallery" class="btn btn-white"><i class="fa fa-arrow-left"></i> Continue shopping</a>
 
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                             </span>
                             <div class="m-t-sm">
                                 <div class="btn-group">
-                                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Checkout</a>
+                                <a href="/checkout" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Checkout</a>
                                 <a href="#" class="btn btn-white btn-sm"> Cancel</a>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@
 
                                         <td>
                                             € {{price}}
-                                            <s class="small text-muted">$230,00</s>
+                                           <!-- <s class="small text-muted">$230,00</s>-->
                                         </td>
                                         <td width="65">
                                             <input type="text" class="form-control" placeholder="1">
@@ -204,7 +204,7 @@
                         </div>
 
 	<div>
-		{{name}} - {{price}}
+		
 		<br>
 		<a href="#" class="remove">Remove</a>
 	</div>
